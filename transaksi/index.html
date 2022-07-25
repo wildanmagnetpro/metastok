@@ -51,20 +51,14 @@
 </div>
 </body>
 </html>
-<script src="https://albedo.link/albedo-intent-button.js" async>
-	let jumlah = document.getElementById("jumlah")
-	let kode = document.getElementById("kode")
-	let memo = document.getElementById("memo")
-
-	x-intent="pay"
-	x-amount=jumlah
-	x-destination=wallet
-	x-asset_code=kode
-	x-asset_issuer="GC26LGKPTLTCOHV647ZGTONVEB4QCNE5SKS3CNXZS6WV4KCTJKEO2WP5"
-	x-memo=memo
-	x-network="public"
-	x-height="30"
-	x-width="200"
-	x-class-name="albedo-button"
-	x-title="PROSES SELANJUTNYA" 
+<script>
+albedo.pay({
+    amount: '10',
+    destination: 'GAWXTUU5XVJ25UUFUAIH4CIDY2TGF4MX6C7DJNOBALWXMVHIV4CI4FE5',
+    asset_code: 'IDRP',
+    asset_issuer: 'GC26LGKPTLTCOHV647ZGTONVEB4QCNE5SKS3CNXZS6WV4KCTJKEO2WP5',
+    memo: 'TEST IDRP',
+    network: 'public'
+})
+    .then(res => console.log(res.amount, res.destination, res.asset_code, res.asset_issuer, res.memo, res.memo_type, res.tx_hash, res.signed_envelope_xdr, res.pubkey, res.network, res.result))
 </script>
