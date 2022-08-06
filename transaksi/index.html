@@ -9,56 +9,19 @@
 <link href="index.css" rel="stylesheet">
 </head>
 <body>
-<div id="container">
-<a href="https://www.wysiwygwebbuilder.com" target="_blank"><img src="images/builtwithwwb17.png" alt="WYSIWYG Web Builder" style="position:absolute;left:441px;top:967px;margin: 0;border-width:0;z-index:250" width="16" height="16"></a>
-</div>
-<div id="wb_LayoutGrid1">
-<div id="LayoutGrid1">
-<div class="row">
-<div class="col-1">
-<hr id="Line6" style="display:block;width: 100%;z-index:0;">
-<div id="wb_Text4">
-<span style="color:#1E90FF;font-family:Arial;font-size:13px;"><strong>KONFIRMASI TRANSAKSI</strong></span>
-</div>
-<hr id="Line1" style="display:block;width: 100%;z-index:2;">
-<div id="wb_Text1">
-<span style="color:#1E90FF;font-family:Arial;font-size:13px;">JUMLAH</span>
-</div>
-<input type="text" id="jumlah" style="display:block;width: 100%;height:26px;z-index:4;" name="Editbox1" value="" spellcheck="false">
-<hr id="Line2" style="display:block;width: 100%;z-index:5;">
-<div id="wb_Text2">
-<span style="color:#1E90FF;font-family:Arial;font-size:13px;">WALLET TUJUAN</span>
-</div>
-<input type="text" id="wallet" style="display:block;width: 100%;height:26px;z-index:7;" name="Editbox1" value="" spellcheck="false">
-<hr id="Line3" style="display:block;width: 100%;z-index:8;">
-<div id="wb_Text3">
-<span style="color:#1E90FF;font-family:Arial;font-size:13px;">KODE ASET</span>
-</div>
-<input type="text" id="asset" style="display:block;width: 100%;height:26px;z-index:10;" name="Editbox1" value="" spellcheck="false">
-<hr id="Line4" style="display:block;width: 100%;z-index:11;">
-<div id="wb_Text5">
-<span style="color:#1E90FF;font-family:Arial;font-size:13px;">MEMO</span>
-</div>
-<input type="text" id="memo" style="display:block;width: 100%;height:26px;z-index:13;" name="Editbox1" value="" spellcheck="false">
-<hr id="Line5" style="display:block;width: 100%;z-index:14;">
-<div id="wb_Text6">
-<span style="color:#1E90FF;font-family:Arial;font-size:13px;">SILAHKAN KLIK PROSES SELANJUTNYA<br>BILA DATA SUDAH SESUAI</span>
-</div>
-<hr id="Line7" style="display:block;width: 100%;z-index:16;">
-</div>
-</div>
-</div>
-</div>
 </body>
-</html>
-<script src="https://albedo.link/albedo-intent-button.js">
-albedo.pay({
-    amount: '10',
-    destination: 'GAWXTUU5XVJ25UUFUAIH4CIDY2TGF4MX6C7DJNOBALWXMVHIV4CI4FE5',
-    asset_code: 'IDRP',
-    asset_issuer: 'GC26LGKPTLTCOHV647ZGTONVEB4QCNE5SKS3CNXZS6WV4KCTJKEO2WP5',
-    memo: 'TEST IDRP',
-    network: 'public'
-})
-    .then(res => console.log(res.amount, res.destination, res.asset_code, res.asset_issuer, res.memo, res.memo_type, res.tx_hash, res.signed_envelope_xdr, res.pubkey, res.network, res.result))
+<script src="https://albedo.link/albedo-intent-button.js"
+  x-intent="pay"
+  x-amount="500000"
+  x-destination="GAWXTUU5XVJ25UUFUAIH4CIDY2TGF4MX6C7DJNOBALWXMVHIV4CI4FE5"
+  x-asset_code="IDRP"
+  x-asset_issuer="GC26LGKPTLTCOHV647ZGTONVEB4QCNE5SKS3CNXZS6WV4KCTJKEO2WP5"
+  x-memo="simpanan wajib"
+  x-network="testnet"
+  x-height="30"
+  x-width="200"
+  x-class-name="albedo-button"
+  x-title="pay" 
+  async>
 </script>
+</html>
